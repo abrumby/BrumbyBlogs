@@ -22,12 +22,10 @@
 </template>
 
 <script>
-//import baseIcon from "@/components/BaseIcon";
 export default {
   name: "blogPost",
   props: ["post"],
   components: {
-    //baseIcon
   }
 }
 </script>

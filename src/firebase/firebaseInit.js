@@ -1,6 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { serverTimestamp } from "firebase/firestore";
-import "firebase/firestore";
+import { initializeApp, } from "firebase/app"
+import { serverTimestamp, getFirestore, Timestamp } from "firebase/firestore"
+import { getAuth } from "firebase/auth"
+import "firebase/firestore"
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAT_hLBYVqxbSQjxpe4vfa9gHhy5BKy93U",
@@ -8,12 +10,16 @@ const firebaseConfig = {
     projectId: "brumbyblogs",
     storageBucket: "brumbyblogs.appspot.com",
     messagingSenderId: "722005979327",
-    appId: "1:722005979327:web:4b918be3666a99da65560a"
-};
+    appId: "1:722005979327:web:4b918be3666a99da65560a",
+    measurementId: "G-C0Q64VBRX2"
+}
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const timestamp = serverTimestamp();
+const firebaseApp = initializeApp(firebaseConfig)
+const analytics = getAnalytics(firebaseApp);
+const auth = getAuth(firebaseApp)
+const db = getFirestore(firebaseApp);
+const timestamp = serverTimestamp()
 
-export {timestamp}
-export default firebaseApp;
+export { auth, timestamp, db, Timestamp, analytics }
+export default firebaseApp

@@ -1,78 +1,61 @@
 <template>
-  <div class="app-wrapper">
-    <div class="app">
-      <Navigation/>
-      <router-view/>
-      <Footer/>
-    </div>
+  <div id="app">
+    <Navigation v-if="!navigation"/>
+    <router-view/>
+    <Footer v-if="!navigation"/>
   </div>
-
 </template>
 
 <script>
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Navigation from './components/sections/Navigation'
+import Footer from './components/sections/Footer'
+import { auth } from '@/firebase/firebaseInit'
 export default {
   name: 'app',
-  components: { Navigation, Footer }
+  components: { Navigation, Footer },
+  created() {
+    this.checkRoute()
+    auth.onAuthStateChanged((user) => {
+      this.$store.commit("updateUser", user)
+      if(user) {
+        this.$store.dispatch("getCurrentUser")
+      }
+    })
+  },
+  data() {
+    return {
+      navigation: null,
+      noTemplates: ['login-view', 'recover-account-view', 'register-view']
+    }
+  },
+  methods: {
+    checkRoute() {
+      if(this.noTemplates.includes(this.$route.name)){
+        this.navigation = true;
+        return;
+      }
+      this.navigation = false;
+    }
+  },
+  watch: {
+    $route() {
+      this.checkRoute();
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user
+    }
+  }
 }
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.link {
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-}
-
-.link-light {
-  color: #fff;
-}
-
-.blog-cards-wrapper {
-  position:relative;
-  padding: 80px 16px 16px;
-  background-color: #f1f1f1;
-  @media(min-width: 500px){
-    padding: 100px 16px;
-  }
-
-  .blog-cards {
-    display:grid;
-    gap: 32px;
-    grid-template-columns: 1fr;
-
-    @media(min-width:500px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media(min-width:900px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media(min-width:1200px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-  }
 }
 </style>
