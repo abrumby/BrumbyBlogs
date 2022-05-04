@@ -1,9 +1,7 @@
 <template>
   <section>
     <div class="container mx-auto my-10 sm:w-5/6 xl:w-2/6">
-      <h3
-        class="mt-1 text-left text-2xl font-bold text-gray-800 sm:mx-6 sm:mx-0 sm:text-center sm:text-3xl md:text-4xl lg:text-5xl"
-      >
+      <h3 class="mt-1 text-left text-2xl font-bold text-gray-800 sm:mx-6 sm:mx-0 sm:text-center sm:text-3xl md:text-4xl lg:text-5xl">
         Todo List
       </h3>
       <div class="new-todo-form column mt-8 flex">
@@ -22,11 +20,7 @@
         </button>
       </div>
       <ul>
-        <TaskCard
-          v-for="(task, index) in $store.state.tasks"
-          :key="index"
-          :task="task"
-        />
+        <TaskCard v-for="(task, index) in $store.state.tasks" :key="index" :task="task" />
       </ul>
     </div>
   </section>
@@ -34,6 +28,7 @@
 
 <script>
 import TaskCard from "@/components/cards/Task";
+
 export default {
   name: "todo-view",
   components: {

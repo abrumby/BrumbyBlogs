@@ -6,18 +6,10 @@
     "
   >
     <div class="column items-center">
-      <input
-        class="mx-1 cursor-pointer"
-        type="checkbox"
-        :checked="task.done"
-        @input="toggleDone"
-      />
+      <input class="mx-1 cursor-pointer" type="checkbox" :checked="task.done" @input="toggleDone" />
       <span :class="{ 'line-through': task.done }">{{ task.content }}</span>
     </div>
-    <div
-      class="row-reverse items-center hover:text-red-500"
-      @click="removeTask"
-    >
+    <div class="row-reverse items-center hover:text-red-500" @click="removeTask">
       <span class="float-right cursor-pointer px-4 py-2">
         <font-awesome-icon :icon="['fas', 'trash']" />
       </span>

@@ -1,22 +1,12 @@
 <template>
-  <section
-    class="bg-white py-8 leading-7 text-gray-900 sm:py-12 md:py-16 lg:py-24"
-  >
+  <section class="bg-white py-8 leading-7 text-gray-900 sm:py-12 md:py-16 lg:py-24">
     <div class="mx-auto max-w-6xl border-solid px-4 px-10 lg:px-12">
-      <div
-        class="flex flex-col items-start border-0 border-gray-200 leading-7 text-gray-900 lg:flex-row lg:items-center"
-      >
+      <div class="flex flex-col items-start border-0 border-gray-200 leading-7 text-gray-900 lg:flex-row lg:items-center">
         <div class="box-border flex-1 border-solid text-center sm:text-left">
-          <h2
-            class="m-0 border-0 border-gray-200 text-left text-4xl font-semibold leading-tight tracking-tight text-black sm:text-5xl"
-          >
+          <h2 class="m-0 border-0 border-gray-200 text-left text-4xl font-semibold leading-tight tracking-tight text-black sm:text-5xl">
             Never miss a post.
           </h2>
-          <p
-            class="mt-2 border-0 border-gray-200 text-left text-xl text-gray-900 sm:text-2xl"
-          >
-            Register for a free account today.
-          </p>
+          <p class="mt-2 border-0 border-gray-200 text-left text-xl text-gray-900 sm:text-2xl">Register for a free account today.</p>
         </div>
         <router-link
           :to="{ name: 'register-view' }"

@@ -2,9 +2,7 @@
   <header>
     <nav>
       <section class="body-font relative w-full bg-white px-8 text-gray-700">
-        <div
-          class="container mx-auto flex max-w-7xl flex-col flex-wrap items-center justify-between py-5 md:flex-row"
-        >
+        <div class="container mx-auto flex max-w-7xl flex-col flex-wrap items-center justify-between py-5 md:flex-row">
           <BrandLink />
           <nav
             class="top-0 left-0 z-0 -ml-0 flex h-full w-full items-center justify-center space-x-5 py-5 text-base md:absolute md:-ml-5 md:py-0"
@@ -14,9 +12,7 @@
             <NavLink view-name="create-blog-view" link-text="Create Blog" />
             <NavLink view-name="about-view" link-text="About" />
           </nav>
-          <div
-            class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end"
-          >
+          <div class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end">
             <NavButton
               v-if="!user"
               view-name="login-view"

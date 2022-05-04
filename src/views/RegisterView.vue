@@ -7,12 +7,7 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <router-link
-          :to="{ name: 'login-view' }"
-          class="text-sm text-blue-600 hover:underline"
-        >
-          Already have an account?
-        </router-link>
+        <router-link :to="{ name: 'login-view' }" class="text-sm text-blue-600 hover:underline"> Already have an account? </router-link>
       </div>
       <form>
         <div class="mt-4">
@@ -62,22 +57,12 @@
             />
           </div>
           <div class="flex items-baseline justify-between">
-            <button
-              type="submit"
-              @click.prevent="register"
-              class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900"
-            >
+            <button type="submit" @click.prevent="register" class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900">
               Register
             </button>
           </div>
-          <div
-            v-for="(error, index) in errors"
-            :key="index"
-            class="flex items-baseline justify-between"
-          >
-            <span class="text-xs tracking-wide text-red-600">{{
-              error.errorMessage
-            }}</span>
+          <div v-for="(error, index) in errors" :key="index" class="flex items-baseline justify-between">
+            <span class="text-xs tracking-wide text-red-600">{{ error.errorMessage }}</span>
           </div>
         </div>
       </form>
@@ -105,18 +90,8 @@ export default {
   methods: {
     async register() {
       this.errors = [];
-      if (
-        this.email !== "" &&
-        this.password !== "" &&
-        this.firstName !== "" &&
-        this.lastName !== "" &&
-        this.username !== ""
-      ) {
-        const createUser = await createUserWithEmailAndPassword(
-          auth,
-          this.email,
-          this.password
-        );
+      if (this.email !== "" && this.password !== "" && this.firstName !== "" && this.lastName !== "" && this.username !== "") {
+        const createUser = await createUserWithEmailAndPassword(auth, this.email, this.password);
         const result = await createUser;
         const docRef = await setDoc(doc(db, "users", result.user.uid), {
           userId: result.user.uid,

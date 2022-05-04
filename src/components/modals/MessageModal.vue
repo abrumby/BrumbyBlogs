@@ -3,12 +3,7 @@
     <div class="modal-content">
       <label class="block">{{ this.modalMessage }}</label>
       <div class="flex items-baseline justify-center">
-        <button
-          @click="closeModal"
-          class="mt-4 rounded-lg bg-zinc-600 px-6 py-2 text-white hover:bg-zinc-900"
-        >
-          Close
-        </button>
+        <button @click="closeModal" class="mt-4 rounded-lg bg-zinc-600 px-6 py-2 text-white hover:bg-zinc-900">Close</button>
       </div>
     </div>
   </div>

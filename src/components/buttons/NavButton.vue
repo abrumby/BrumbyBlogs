@@ -1,8 +1,5 @@
 <template>
-  <router-link
-    :to="{ name: viewName }"
-    :class="[activeClass, textColor, bgColor, bgHoverColor]"
-  >
+  <router-link :to="{ name: viewName }" :class="[activeClass, textColor, bgColor, bgHoverColor]">
     {{ buttonText }}
   </router-link>
 </template>

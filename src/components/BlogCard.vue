@@ -8,10 +8,7 @@
         <font-awesome-icon :icon="['fas', 'trash']" />
       </div>
     </div>
-    <img
-      :src="require(`@/assets/blogCards/${card.blogCoverPhoto}.jpg`)"
-      alt="{{card.blogCoverPhotoAlt}}"
-    />
+    <img :src="require(`@/assets/blogCards/${card.blogCoverPhoto}.jpg`)" alt="{{card.blogCoverPhotoAlt}}" />
     <div class="info">
       <h4>{{ card.blogTitle }}</h4>
       <h6>Posted on: {{ card.blogDate }}</h6>
@@ -44,8 +41,7 @@ export default {
   transition: 0.5s ease all;
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   .icons {
     display: flex;

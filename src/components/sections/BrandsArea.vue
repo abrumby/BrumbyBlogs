@@ -2,9 +2,7 @@
   <section class="text-gray-500">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 gap-12 md:grid-cols-6 lg:grid-cols-4">
-        <div
-          class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-2 lg:col-span-1"
-        >
+        <div class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-2 lg:col-span-1">
           <svg
             height="60"
             width="60"
@@ -38,28 +36,12 @@
                 <stop offset=".14" stop-color="#fff045" />
                 <stop offset=".37" stop-color="#00cdd7" />
               </linearGradient>
-              <linearGradient
-                id="c"
-                x1="111.71"
-                y1="-676.79"
-                x2="119.07"
-                y2="-702.86"
-                xlink:href="#a"
-              />
+              <linearGradient id="c" x1="111.71" y1="-676.79" x2="119.07" y2="-702.86" xlink:href="#a" />
             </defs>
             <title>icon_WebStorm</title>
-            <path
-              fill="url(#a)"
-              d="M17.2 115.6L0 13.4 32 .2l20.2 12L71 2.2l38.8 15L88 128l-70.8-12.4z"
-            />
-            <path
-              fill="url(#b)"
-              d="M128 43.4L111.4 2.6 81.6 0 35.2 44.4l12.4 57.4L71 118l57-33.8L114 58l14-14.6z"
-            />
-            <path
-              fill="url(#c)"
-              d="M102.4 37.2L114 58l14-14.6L117.8 18l-15.4 19.2z"
-            />
+            <path fill="url(#a)" d="M17.2 115.6L0 13.4 32 .2l20.2 12L71 2.2l38.8 15L88 128l-70.8-12.4z" />
+            <path fill="url(#b)" d="M128 43.4L111.4 2.6 81.6 0 35.2 44.4l12.4 57.4L71 118l57-33.8L114 58l14-14.6z" />
+            <path fill="url(#c)" d="M102.4 37.2L114 58l14-14.6L117.8 18l-15.4 19.2z" />
             <g>
               <path d="M24 24h80v80H24z" />
               <path
@@ -69,33 +51,14 @@
             </g>
           </svg>
         </div>
-        <div
-          class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-2 lg:col-span-1"
-        >
-          <svg
-            height="60"
-            width="60"
-            viewBox="0 0 256 221"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMinYMin meet"
-          >
-            <path
-              d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36z"
-              fill="#41B883"
-            />
-            <path
-              d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0H0z"
-              fill="#41B883"
-            />
-            <path
-              d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56z"
-              fill="#35495E"
-            />
+        <div class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-2 lg:col-span-1">
+          <svg height="60" width="60" viewBox="0 0 256 221" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+            <path d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36z" fill="#41B883" />
+            <path d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0H0z" fill="#41B883" />
+            <path d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56z" fill="#35495E" />
           </svg>
         </div>
-        <div
-          class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-3 lg:col-span-1"
-        >
+        <div class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-3 lg:col-span-1">
           <svg
             height="60"
             width="60"
@@ -105,72 +68,22 @@
             preserveAspectRatio="xMidYMid"
           >
             <defs>
-              <path
-                d="M1.253 280.732l1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188L1.253 280.732z"
-                id="a"
-              />
-              <filter
-                x="-50%"
-                y="-50%"
-                width="200%"
-                height="200%"
-                filterUnits="objectBoundingBox"
-                id="b"
-              >
-                <feGaussianBlur
-                  stdDeviation="17.5"
-                  in="SourceAlpha"
-                  result="shadowBlurInner1"
-                />
+              <path d="M1.253 280.732l1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188L1.253 280.732z" id="a" />
+              <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="b">
+                <feGaussianBlur stdDeviation="17.5" in="SourceAlpha" result="shadowBlurInner1" />
                 <feOffset in="shadowBlurInner1" result="shadowOffsetInner1" />
-                <feComposite
-                  in="shadowOffsetInner1"
-                  in2="SourceAlpha"
-                  operator="arithmetic"
-                  k2="-1"
-                  k3="1"
-                  result="shadowInnerInner1"
-                />
-                <feColorMatrix
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-                  in="shadowInnerInner1"
-                />
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" />
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" in="shadowInnerInner1" />
               </filter>
               <path
                 d="M134.417 148.974l32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744 31.678 58.556z"
                 id="c"
               />
-              <filter
-                x="-50%"
-                y="-50%"
-                width="200%"
-                height="200%"
-                filterUnits="objectBoundingBox"
-                id="d"
-              >
-                <feGaussianBlur
-                  stdDeviation="3.5"
-                  in="SourceAlpha"
-                  result="shadowBlurInner1"
-                />
-                <feOffset
-                  dx="1"
-                  dy="-9"
-                  in="shadowBlurInner1"
-                  result="shadowOffsetInner1"
-                />
-                <feComposite
-                  in="shadowOffsetInner1"
-                  in2="SourceAlpha"
-                  operator="arithmetic"
-                  k2="-1"
-                  k3="1"
-                  result="shadowInnerInner1"
-                />
-                <feColorMatrix
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"
-                  in="shadowInnerInner1"
-                />
+              <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="d">
+                <feGaussianBlur stdDeviation="3.5" in="SourceAlpha" result="shadowBlurInner1" />
+                <feOffset dx="1" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1" />
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" />
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0" in="shadowInnerInner1" />
               </filter>
             </defs>
             <path
@@ -185,10 +98,7 @@
             />
             <use fill="#FFA50E" fill-rule="evenodd" xlink:href="#c" />
             <use filter="url(#d)" xlink:href="#c" />
-            <path
-              fill="#F6820C"
-              d="M0 282.998l.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z"
-            />
+            <path fill="#F6820C" d="M0 282.998l.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z" />
             <path
               d="M139.121 347.551l116.275-64.847-33.204-204.495c-1.039-6.398-8.888-8.927-13.468-4.34L0 282.998l115.608 64.548a24.126 24.126 0 0 0 23.513.005"
               fill="#FDE068"
@@ -203,15 +113,8 @@
             />
           </svg>
         </div>
-        <div
-          class="col-span-2 flex items-center justify-center text-gray-500 md:col-span-3 lg:col-span-1"
-        >
-          <svg
-            height="60"
-            width="60"
-            viewBox=".0 .13 799.7 479.69"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div class="col-span-2 flex items-center justify-center text-gray-500 md:col-span-3 lg:col-span-1">
+          <svg height="60" width="60" viewBox=".0 .13 799.7 479.69" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m400 .13c-106.63 0-173.27 53.3-199.93 159.89 39.99-53.3 86.64-73.28 139.95-59.96 30.42 7.6 52.16 29.67 76.23 54.09 39.2 39.78 84.57 85.82 183.68 85.82 106.62 0 173.27-53.3 199.92-159.9-39.98 53.3-86.63 73.29-139.95 59.97-30.41-7.6-52.15-29.67-76.22-54.09-39.2-39.78-84.58-85.82-183.68-85.82zm-199.93 239.84c-106.62 0-173.27 53.3-199.92 159.9 39.98-53.3 86.63-73.29 139.95-59.96 30.41 7.61 52.15 29.67 76.22 54.08 39.2 39.78 84.58 85.83 183.68 85.83 106.63 0 173.27-53.3 199.93-159.9-39.99 53.3-86.64 73.29-139.95 59.96-30.42-7.59-52.16-29.67-76.23-54.08-39.2-39.78-84.57-85.83-183.68-85.83z"
               fill="#06b6d4"
