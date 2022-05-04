@@ -1,24 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView'
-import AboutView from '@/views/AboutView'
-import BlogsView from '@/views/BlogsView'
-import CreateBlogView from '@/views/CreateBlogView'
-import LoginView from '@/views/LoginView'
-import RegisterView from '@/views/RegisterView'
-import RecoverAccountView from '@/views/RecoverAccountView'
-import ProfileView from "@/views/ProfileView"
-import TestFormView from "@/views/TestFormView"
-import AdminView from "@/views/AdminView"
 import { auth } from "@/firebase/firebaseInit"
-import NotFound from "@/views/NotFound"
-import TodoView from "@/views/TodoView"
-
 
 const routes = [
   {
     path: '/',
     name: 'home-view',
-    component: HomeView,
+    component: () => import('@/views/HomeView'),
     meta: {
       title: 'Home',
       requiresAuth: false
@@ -27,7 +14,7 @@ const routes = [
   {
     path: '/blogs',
     name: 'blogs-view',
-    component: BlogsView,
+    component: () => import('@/views/BlogsView'),
     meta: {
       title: 'Blogs',
       requiresAuth: false
@@ -36,7 +23,7 @@ const routes = [
   {
     path: '/create-blog',
     name: 'create-blog-view',
-    component: CreateBlogView,
+    component: () => import('@/views/CreateBlogView'),
     meta: {
       title: 'Blogs',
       requiresAuth: false
@@ -45,7 +32,7 @@ const routes = [
   {
     path: '/about',
     name: 'about-view',
-    component: AboutView,
+    component: () => import('@/views/AboutView'),
     meta: {
       title: 'About',
       requiresAuth: false
@@ -54,7 +41,7 @@ const routes = [
   {
     path: '/profile',
     name: 'profile-view',
-    component: ProfileView,
+    component: () => import('@/views/ProfileView'),
     meta: {
       title: 'My Profile',
       requiresAuth: true
@@ -63,7 +50,7 @@ const routes = [
   {
     path: '/admin',
     name: 'admin-view',
-    component: AdminView,
+    component: () => import('@/views/AdminView'),
     meta: {
       title: 'Admin',
       requiresAuth: true
@@ -72,7 +59,7 @@ const routes = [
   {
     path: '/login',
     name: 'login-view',
-    component: LoginView,
+    component: () => import('@/views/AdminView'),
     meta: {
       title: 'Login',
       requiresAuth: false
@@ -81,7 +68,7 @@ const routes = [
   {
     path: '/register',
     name: 'register-view',
-    component: RegisterView,
+    component: () => import('@/views/RegisterView'),
     meta: {
       title: 'Register',
       requiresAuth: false
@@ -90,7 +77,7 @@ const routes = [
   {
     path: '/recover-account',
     name: 'recover-account-view',
-    component: RecoverAccountView,
+    component: () => import('@/views/RecoverAccountView'),
     meta: {
       title: 'Account',
       requiresAuth: false
@@ -99,7 +86,7 @@ const routes = [
   {
     path: '/test',
     name: 'test-form-view',
-    component: TestFormView,
+    component: () => import('@/views/TestFormView'),
     meta: {
       title: 'Test Form',
       requiresAuth: false
@@ -108,7 +95,7 @@ const routes = [
   {
     path: "/todo",
     name: 'todo-view',
-    component: TodoView,
+    component: () => import('@/views/TodoView'),
     meta: {
       title: 'Todo',
       requiresAuth: false
@@ -117,7 +104,7 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     name: "NotFound",
-    component: NotFound,
+    component: () => import('@/views/NotFound'),
   }
 ]
 
