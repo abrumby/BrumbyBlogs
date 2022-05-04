@@ -1,18 +1,19 @@
-import { initializeApp, } from "firebase/app"
+import { initializeApp } from "firebase/app"
 import { serverTimestamp, getFirestore, Timestamp } from "firebase/firestore"
 import { getAuth } from "firebase/auth"
 import "firebase/firestore"
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAT_hLBYVqxbSQjxpe4vfa9gHhy5BKy93U",
-    authDomain: "brumbyblogs.firebaseapp.com",
-    projectId: "brumbyblogs",
-    storageBucket: "brumbyblogs.appspot.com",
-    messagingSenderId: "722005979327",
-    appId: "1:722005979327:web:4b918be3666a99da65560a",
-    measurementId: "G-C0Q64VBRX2"
+    apiKey: process.env.VUE_APP_API_KEY,
+    authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+    projectId: process.env.VUE_APP_PROJECT_ID,
+    storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.VUE_APP_MESSAGE_SENDER_ID,
+    appId: process.env.VUE_APP_APP_ID,
+    measurementId: process.env.VUE_APP_MEASUREMENT_ID
 }
+
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig)

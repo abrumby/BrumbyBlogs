@@ -6,17 +6,33 @@
         <h2 v-else>{{ post.blogTitle }}</h2>
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p class="content-preview" v-else>{{ post.blogHtml }}</p>
-        <router-link class="link link-light" v-if="post.welcomeScreen" :to="{name: 'about-view'}">
+        <router-link
+          class="link link-light"
+          v-if="post.welcomeScreen"
+          :to="{ name: 'about-view' }"
+        >
           Login/Register
         </router-link>
-        <router-link class="link link-light" :to="{name: 'about-view'}" v-else>
+        <router-link
+          class="link link-light"
+          :to="{ name: 'about-view' }"
+          v-else
+        >
           View the Post
         </router-link>
       </div>
     </div>
     <div class="blog-photo">
-      <img v-if="post.welcomeScreen" :src="require(`@/assets/blogPhotos/${post.photo}.jpg`)" alt="{{post.photoAlt}}" />
-      <img v-else :src="require(`@/assets/blogPhotos/${post.blogCoverPhoto}.jpg`)" alt="{{post.blogCoverPhotoAlt}}" />
+      <img
+        v-if="post.welcomeScreen"
+        :src="require(`@/assets/blogPhotos/${post.photo}.jpg`)"
+        alt="{{post.photoAlt}}"
+      />
+      <img
+        v-else
+        :src="require(`@/assets/blogPhotos/${post.blogCoverPhoto}.jpg`)"
+        alt="{{post.blogCoverPhotoAlt}}"
+      />
     </div>
   </div>
 </template>
@@ -25,16 +41,16 @@
 export default {
   name: "blogPost",
   props: ["post"],
-  components: {
-  }
-}
+  components: {},
+};
 </script>
 
 <style lang="scss" scoped>
 .blog-wrapper {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   @media (min-width: 700px) {
     min-height: 650px;
     max-height: 650px;
@@ -111,7 +127,8 @@ export default {
   .blog-photo {
     order: 1;
     flex: 3;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
     @media (min-width: 700px) {
       order: 2;

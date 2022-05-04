@@ -1,12 +1,22 @@
 <template>
   <section class="relative w-full bg-white">
-    <div class="absolute w-full h-32 bg-white"></div>
-    <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
-      <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+    <div class="absolute h-32 w-full bg-white"></div>
+    <div
+      class="relative mx-auto w-full max-w-7xl px-5 py-10 sm:py-12 md:py-16 md:px-10"
+    >
+      <div class="mt-8 flex grid h-full grid-cols-12 gap-10 pb-10 sm:mt-16">
         <!--POSTS-->
-        <BlogLarge :post="post" v-for="(post, index) in sampleBlogPosts" :key="index" />
-        <div class="grid grid-cols-12 col-span-12 gap-7">
-          <BlogSmall :post="post" v-for="(post, index) in sampleBlogCards" :key="index" />
+        <BlogLarge
+          :post="post"
+          v-for="(post, index) in sampleBlogPosts"
+          :key="index"
+        />
+        <div class="col-span-12 grid grid-cols-12 gap-7">
+          <BlogSmall
+            :post="post"
+            v-for="(post, index) in sampleBlogCards"
+            :key="index"
+          />
         </div>
       </div>
     </div>
@@ -14,21 +24,21 @@
 </template>
 
 <script>
-import BlogLarge from "@/components/cards/BlogLarge"
-import BlogSmall from "@/components/cards/BlogSmall"
+import BlogLarge from "@/components/cards/BlogLarge";
+import BlogSmall from "@/components/cards/BlogSmall";
 export default {
   name: "BlogsArea",
   components: {
     BlogLarge,
-    BlogSmall
+    BlogSmall,
   },
   computed: {
     sampleBlogPosts() {
-      return this.$store.state.sampleBlogPosts
+      return this.$store.state.sampleBlogPosts;
     },
     sampleBlogCards() {
-      return this.$store.state.sampleBlogCards
-    }
-  }
-}
+      return this.$store.state.sampleBlogCards;
+    },
+  },
+};
 </script>

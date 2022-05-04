@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  name: "CreateBlogView"
-}
+  name: "CreateBlogView",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
