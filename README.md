@@ -1,4 +1,5 @@
-# fireblogs
+# Brumby Logs
+My own personal website to blog and showcase some of my development skills.
 
 ## Project setup
 ```
