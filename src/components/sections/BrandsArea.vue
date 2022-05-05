@@ -3,14 +3,7 @@
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 gap-12 md:grid-cols-6 lg:grid-cols-4">
         <div class="col-span-1 flex items-center justify-center text-gray-500 md:col-span-2 lg:col-span-1">
-          <svg
-            height="60"
-            width="60"
-            viewBox="0 0 128 128"
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
+          <svg height="60" width="60" viewBox="0 0 128 128" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
               <linearGradient
                 id="a"
@@ -75,10 +68,7 @@
                 <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" />
                 <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" in="shadowInnerInner1" />
               </filter>
-              <path
-                d="M134.417 148.974l32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744 31.678 58.556z"
-                id="c"
-              />
+              <path d="M134.417 148.974l32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744 31.678 58.556z" id="c" />
               <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="d">
                 <feGaussianBlur stdDeviation="3.5" in="SourceAlpha" result="shadowBlurInner1" />
                 <feOffset dx="1" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1" />
@@ -86,16 +76,10 @@
                 <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0" in="shadowInnerInner1" />
               </filter>
             </defs>
-            <path
-              d="M0 282.998l2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951L0 282.998z"
-              fill="#FFC24A"
-            />
+            <path d="M0 282.998l2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951L0 282.998z" fill="#FFC24A" />
             <use fill="#FFA712" fill-rule="evenodd" xlink:href="#a" />
             <use filter="url(#b)" xlink:href="#a" />
-            <path
-              d="M135.005 150.38l32.955-33.75-32.965-62.93c-3.129-5.957-11.866-5.975-14.962 0L102.42 87.287v2.86l32.584 60.233z"
-              fill="#F4BD62"
-            />
+            <path d="M135.005 150.38l32.955-33.75-32.965-62.93c-3.129-5.957-11.866-5.975-14.962 0L102.42 87.287v2.86l32.584 60.233z" fill="#F4BD62" />
             <use fill="#FFA50E" fill-rule="evenodd" xlink:href="#c" />
             <use filter="url(#d)" xlink:href="#c" />
             <path fill="#F6820C" d="M0 282.998l.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z" />

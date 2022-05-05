@@ -59,7 +59,7 @@ const routes = [
   {
     path: "/login",
     name: "login-view",
-    component: () => import("@/views/AdminView"),
+    component: () => import("@/views/LoginView"),
     meta: {
       title: "Login",
       requiresAuth: false,

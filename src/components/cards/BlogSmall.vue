@@ -1,11 +1,7 @@
 <template>
   <div class="col-span-12 flex flex-col items-start overflow-hidden rounded-xl shadow-sm md:col-span-6 lg:col-span-4">
     <a href="/" class="block transform transition duration-200 ease-out hover:scale-110">
-      <img
-        class="max-h-56 w-full object-cover shadow-sm"
-        :src="require(`@/assets/blogCards/${post.blogCoverPhoto}.jpg`)"
-        :alt="post.blogCoverPhotoAlt"
-      />
+      <img class="max-h-56 w-full object-cover shadow-sm" :src="require(`@/assets/blogCards/${post.blogCoverPhoto}.jpg`)" :alt="post.blogCoverPhotoAlt" />
     </a>
     <div class="relative flex w-full flex-col items-start rounded-b-2xl border border-t-0 border-gray-200 bg-white px-6 py-7">
       <div

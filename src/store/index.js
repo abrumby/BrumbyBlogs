@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 import { auth, db } from "@/firebase/firebaseInit";
-import { doc, getDoc, updateDoc, serverTimestamp } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, updateDoc } from "firebase/firestore";
 
 export default createStore({
   state: {
@@ -89,7 +89,6 @@ export default createStore({
       state.profile.email = payload;
     },
     deleteTask(state, task) {
-      console.log(task);
       state.tasks.splice(state.tasks.indexOf(task), 1);
     },
     setProfileInfo(state, doc) {
@@ -119,7 +118,6 @@ export default createStore({
       await docSnap;
       commit("setProfileInfo", docSnap);
       commit("setProfileInitials");
-      console.log(docSnap);
     },
     async updateUserProfile({ commit, state }) {
       const docRef = doc(db, "users", state.profile.id);

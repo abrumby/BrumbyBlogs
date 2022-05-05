@@ -57,9 +57,7 @@
             />
           </div>
           <div class="flex items-baseline justify-between">
-            <button type="submit" @click.prevent="register" class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900">
-              Register
-            </button>
+            <button type="submit" @click.prevent="register" class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900">Register</button>
           </div>
           <div v-for="(error, index) in errors" :key="index" class="flex items-baseline justify-between">
             <span class="text-xs tracking-wide text-red-600">{{ error.errorMessage }}</span>

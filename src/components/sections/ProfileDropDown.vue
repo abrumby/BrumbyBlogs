@@ -20,10 +20,7 @@
         </router-link>
       </li>
       <li class="">
-        <div
-          @click="signOut"
-          class="whitespace-no-wrap block cursor-pointer rounded-b bg-gray-200 py-2 px-4 hover:bg-red-600 hover:text-white"
-        >
+        <div @click="signOut" class="whitespace-no-wrap block cursor-pointer rounded-b bg-gray-200 py-2 px-4 hover:bg-red-600 hover:text-white">
           <span><font-awesome-icon :icon="['fas', 'circle-xmark']" class="left" /></span>
           <span class="pl-2">Sign Out</span>
         </div>
@@ -45,7 +42,6 @@ export default {
   },
   computed: {
     user() {
-      console.log(this.$store.state.user);
       return this.$store.state.user;
     },
   },

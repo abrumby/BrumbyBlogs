@@ -4,9 +4,7 @@
       <section class="body-font relative w-full bg-white px-8 text-gray-700">
         <div class="container mx-auto flex max-w-7xl flex-col flex-wrap items-center justify-between py-5 md:flex-row">
           <BrandLink />
-          <nav
-            class="top-0 left-0 z-0 -ml-0 flex h-full w-full items-center justify-center space-x-5 py-5 text-base md:absolute md:-ml-5 md:py-0"
-          >
+          <nav class="top-0 left-0 z-0 -ml-0 flex h-full w-full items-center justify-center space-x-5 py-5 text-base md:absolute md:-ml-5 md:py-0">
             <NavLink view-name="home-view" link-text="Home" />
             <NavLink view-name="blogs-view" link-text="Blogs" />
             <NavLink view-name="create-blog-view" link-text="Create Blog" />
@@ -56,7 +54,6 @@ export default {
   },
   computed: {
     user() {
-      console.log(this.$store.state.user);
       return this.$store.state.user;
     },
   },

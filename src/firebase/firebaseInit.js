@@ -1,8 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { serverTimestamp, getFirestore, Timestamp } from "firebase/firestore";
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
+import { getFirestore, serverTimestamp, Timestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
+import { getFunctions } from "firebase/functions";
 
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_API_KEY,
@@ -16,10 +18,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+if (location.hostname === "localhost") {
+  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+}
+const appCheck = initializeAppCheck(firebaseApp, {
+  isTokenAutoRefreshEnabled: true,
+  provider: new ReCaptchaV3Provider("6LeYdsUfAAAAAFViMHFbbmtW06LEMDh6nLjRl_7N"),
+});
 const analytics = getAnalytics(firebaseApp);
 const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 const timestamp = serverTimestamp();
-
-export { auth, timestamp, db, Timestamp, analytics };
+const functions = getFunctions(firebaseApp);
+export { auth, timestamp, db, Timestamp, analytics, functions, appCheck };
 export default firebaseApp;

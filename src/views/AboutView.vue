@@ -1,23 +1,18 @@
 <template>
-  <section class="min-w-screen relative -z-10 bg-white">
-    <div class="container mx-auto sm:px-12 xl:px-5">
-      <p class="sm:text-normal text-left text-xs font-bold uppercase text-pink-500 sm:mx-6 sm:text-center sm:font-bold">
-        Frequently Asked Questions
-      </p>
-      <h3 class="mt-1 text-left text-2xl font-bold text-gray-800 sm:mx-6 sm:mx-0 sm:text-center sm:text-3xl md:text-4xl lg:text-5xl">
-        What is Brumby Logs?
-      </h3>
-      <QuestionStandard :question="question" v-for="(question, index) in question" :key="index" />
-    </div>
-  </section>
+  <PageWrapper>
+    <p class="sm:text-normal text-left text-xs font-bold uppercase text-pink-500 sm:mx-6 sm:text-center sm:font-bold">Frequently Asked Questions</p>
+    <h3 class="mt-1 text-left text-2xl font-bold text-gray-800 sm:mx-6 sm:mx-0 sm:text-center sm:text-3xl md:text-4xl lg:text-5xl">What is Brumby Logs?</h3>
+    <QuestionStandard :question="question" v-for="(question, index) in question" :key="index" />
+  </PageWrapper>
 </template>
 
 <script>
 import QuestionStandard from "@/components/cards/QuestionStandard";
+import PageWrapper from "@/components/layouts/PageWrapper";
 
 export default {
   name: "about-view",
-  components: { QuestionStandard },
+  components: { QuestionStandard, PageWrapper },
   data() {
     return {
       question: [

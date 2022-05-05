@@ -1,9 +1,5 @@
 <template>
-  <div
-    id="toast-default"
-    class="flex w-full max-w-xs items-center rounded-lg border-b-2 border-t-2 bg-white p-4 text-gray-500 shadow"
-    role="alert"
-  >
+  <div id="toast-default" class="flex w-full max-w-xs items-center rounded-lg border-b-2 border-t-2 bg-white p-4 text-gray-500 shadow" role="alert">
     <div class="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-500">
       <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path

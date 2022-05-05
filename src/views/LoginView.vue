@@ -31,12 +31,8 @@
             />
           </div>
           <div class="flex items-baseline justify-between">
-            <button type="submit" @click.prevent="signIn" class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900">
-              Login
-            </button>
-            <router-link :to="{ name: 'recover-account-view' }" class="text-sm text-blue-600 hover:underline">
-              Forgot password?
-            </router-link>
+            <button type="submit" @click.prevent="signIn" class="mt-4 rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900">Login</button>
+            <router-link :to="{ name: 'recover-account-view' }" class="text-sm text-blue-600 hover:underline"> Forgot password? </router-link>
           </div>
           <div v-for="(error, index) in errors" :key="index" class="flex items-baseline justify-between">
             <span class="text-xs tracking-wide text-red-600">{{ error.errorMessage }}</span>
@@ -67,7 +63,6 @@ export default {
         await signInWithEmailAndPassword(auth, this.email, this.password)
           .then(() => {
             this.$router.push({ name: "home-view" });
-            console.log(auth.currentUser.uid);
           })
           .catch((err) => {
             this.errors.push({

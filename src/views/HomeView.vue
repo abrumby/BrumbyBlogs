@@ -1,10 +1,8 @@
 <template>
-  <div class="home">
-    <HomeHero :post="welcomeScreen" />
-    <BlogsArea />
-    <RegisterSection v-if="!user" />
-    <BrandsArea />
-  </div>
+  <HomeHero :post="welcomeScreen" />
+  <BlogsArea />
+  <RegisterSection v-if="!user" />
+  <BrandsArea />
 </template>
 
 <script>
@@ -12,6 +10,7 @@ import RegisterSection from "@/components/sections/RegisterSection";
 import BrandsArea from "@/components/sections/BrandsArea";
 import HomeHero from "@/components/hero/HomeHero";
 import BlogsArea from "@/components/sections/BlogsArea";
+
 export default {
   name: "home-view",
   components: {

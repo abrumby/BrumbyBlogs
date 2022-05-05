@@ -1,8 +1,7 @@
 <template>
   <li
     :class="
-      'row my-1 mt-2 flex w-full items-center justify-between rounded border bg-gray-100 py-1 px-4 text-gray-600 ' +
-      `${task.done ? 'border-green-600' : ''}`
+      'row my-1 mt-2 flex w-full items-center justify-between rounded border bg-gray-100 py-1 px-4 text-gray-600 ' + `${task.done ? 'border-green-600' : ''}`
     "
   >
     <div class="column items-center">
